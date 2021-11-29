@@ -1,0 +1,37 @@
+
+extends layout
+
+block content
+
+  h1= title
+  h2 Add a Course
+  form(id="add_form")
+    div.inputDiv
+      label(for="courseCode") Course Code:
+      input(type="text", name="courseCode" id="code")
+    div.inputDiv
+      label(for="courseName") Course Name:
+      input(type="text", name="courseName" id="name")
+    div.inputDiv
+      label(for="coursePeriod") Course Period:
+      input(type="number", name="coursePeriod", id="period")
+    input(id="addSubmit" type="submit" value="Add Course")
+
+
+    form(id="search_form")
+      div.inputDiv
+        input(type="search", name="search" id="search")
+        input(id="searchSubmit" type="submit" value="Search")
+
+  h2 All Courses
+  each course in courses
+    div#course._id
+      ul
+        li ID: #{course._id}
+        li Course Code: #{course.courseCode}
+        li Course Name: #{course.courseName}
+        li Course Period: #{course.coursePeriod}
+      div
+        button(onclick='deleteCourse("' + course._id + '")') Delete
+
+  script(src='/javascripts/main.js')

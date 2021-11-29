@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <title>Courses</title>
+</head>
+
+<body>
+  <main>
+    <div class="h1Div">
+      <h1>Courses</h1>
+    </div>
+    <section id="add_section">
+      <h2>Add a Course</h2>
+
+      <form id="add_form">
+        <div class="inputDiv">
+          <label for="courseCode">Course Code: </label>
+          <input type="text" name="courseCode" id="code">
+        </div>
+        <div class="inputDiv">
+          <label for="courseName">Course Name: </label>
+          <input type="text" name="courseName" id="name">
+        </div>
+        <div class="inputDiv">
+          <label for="coursePeriod">Course Period: </label>
+          <input type="number" name="courseName" id="period">
+        </div>
+        <div class="inputDiv">
+          <input type="submit" value="Add Course" id="addSubmit">
+        </div>
+      </form>
+    </section>
+
+    <section id="courses_section">
+      <h2>All Courses</h2>
+      <div id="coursesDiv">
+      </div>
+    </section>
+  </main>
+  <script src="../javascripts/main.js"></script>
+</body>
+
+</html>
